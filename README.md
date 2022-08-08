@@ -11,9 +11,16 @@ The Model is deployed as sagemaker endpoint.
 The inference.py file preproceses the incoming request for inferecing usung the grpc protocol , which is considered more efficient than REST Api for large data volumne inferencing 
 
 
-### AWS LAmbda Function 
+### AWS Lambda Function - API Gateway
 
 The AWS lambda function is deployed using API Gateway to invoke the sagemaker endpoint deployed above
 
+### File System 
+
+sagemaker-tf-serving-grpc-deployment.ipynb  - > Notebook for Model Deployment
+
+code/inference,py  -> Entrypoint for data preprocessing and inferecing using grpc protocol
+
+lambda_function.py -> for creating AWS lambda function that is configured thrpugh API Gateway as Rest Api to invoke sagemaker endponts
 
 
